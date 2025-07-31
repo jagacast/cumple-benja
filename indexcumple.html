@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Feliz cumple, Benjamín!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .tarjeta {
+      background: #1e1e1e;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00f2ff;
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+      width: 90%;
+      animation: aparecer 2s ease-in-out;
+    }
+    @keyframes aparecer {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    h1 {
+      color: #00f2ff;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .contenido img {
+    
+      width: 20%;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #fff3;
+      transition: transform 0.5s;
+      cursor: pointer;
+    }
+    .contenido img:hover {
+      transform: scale(1.1);
+    }
+    .mensaje {
+      margin-top: 20px;
+      font-size: 40px;
+      line-height: 1.5;
+      color:mediumslateblue;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 30px;
+      color: #ccc;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="tarjeta">
+    <h2>BENJAMIN<br>¡Sobrinito querido, "Feliz cumple, chiquitin. Sos el sobrino preferido. Te quiero con todo el corazón, nunca lo olvides. — Tu tío. JAIME!</h2>
+
+    <div class="contenido">
+      <img src="assets/benja.jpg" alt="Argentina" onclick="mostrarMensaje('¡Campeones del Mundo, lo gritamos juntos! 🇦🇷')">
+      
+      <img src="assets/roblox.jpg"  alt="Roblox" onclick="mostrarMensaje('Horas y horas de juegos y risas en Roblox 👾')">
+
+      <img src="assets/benja3.jpg" alt="Amor por los animales" onclick="mostrarMensaje('El amor por los animales, rocky y manchitas, nuestros compañeritos de vida 🚀⚽')">
+    </div>
+
+    <div class="mensaje" id="mensaje">
+      Haz CLICK en cada imagen para recordar juntos 🧠💙
+    </div>
+
+    <div class="footer">
+     POR QUE LA VIDA NOS DE MAS AÑOS JUNTOS<BR> EL TIO 🧡
+    </div>
+    <audio id="musica" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" autoplay loop></audio>
+    </div>
+
+  <script>
+    function mostrarMensaje(texto) {
+      document.getElementById('mensaje').textContent = texto;
+    }
+  </script>
+</body>
+</html>
